@@ -49,23 +49,13 @@ var App = function(argv) {
 		app.use(bodyParser.urlencoded({ limit: '50mb', extended: false }));
 		app.use(bodyParser.json({limit: '50mb'}));
 
-		app.get('/', function (req, res) {
+		app.get('/*', function (req, res) {
 			res.sendFile(Path.join(path, 'index.html'));
 		});
 
-		app.get('/foo', (req, res) => {
-			res.send('Hello World!');
-		});
-
-		//var server = require('http').Server(app);
-
-
 		app.listen(argv.port, function () {
 			debug(`Listening on port ${argv.port}`);
-
 		});
-
-
 
 	}
 
