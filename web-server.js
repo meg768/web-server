@@ -50,7 +50,7 @@ var App = function(argv) {
 		app.use(bodyParser.json({limit: '50mb'}));
 
 		app.get('/', function (req, res) {
-			res.sendFile(Path.join(__dirname, path, 'index.html'));
+			res.sendFile(Path.join(path, 'index.html'));
 		});
 
 		app.get('/foo', (req, res) => {
