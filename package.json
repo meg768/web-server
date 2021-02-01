@@ -1,0 +1,27 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "A static web-server using express.",
+  "main": "web-server.js",
+  "scripts": {
+    "git-commit": "make git-commit",
+    "git-pull": "make git-pull",
+    "goto-github": "make goto-github"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meg768/web-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meg768/web-server/issues"
+  },
+  "homepage": "https://github.com/meg768/web-server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "yargs": "^16.2.0",
+    "yow": "^1.0.108"
+  }
+}
