@@ -11,8 +11,6 @@ function debug() {
 	console.log.apply(this, arguments);
 }
 
-debug('HEJ');
-
 var App = function(argv) {
 
 
@@ -51,8 +49,8 @@ var App = function(argv) {
 		app.use(bodyParser.urlencoded({ limit: '50mb', extended: false }));
 		app.use(bodyParser.json({limit: '50mb'}));
 
-		app.get('/', (req, res) => {
-			res.send('Hello World!');
+		app.get('/', function (req, res) {
+			res.sendFile(Path.join(__dirname, path, 'index.html'));
 		});
 
 		app.get('/foo', (req, res) => {
